@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
 import urllib2
@@ -155,11 +156,11 @@ class UralSibBankCrawler(BasicCrawler):
 
     @return_float
     def get_usd_buy(self):
-        return self.doc.xpath('//*[@id="rates-col2"]/div/table[1]/tbody/tr[1]/td[2]/span/text()')[0]
+        return self.doc.xpath('//*[@id="page"]/div[7]/ul/li[1]/div/table/tbody/tr[1]/td[3]/span/text()')[0]
 
     @return_float
     def get_usd_sell(self):
-        return self.doc.xpath('//*[@id="rates-col2"]/div/table[1]/tbody/tr[1]/td[3]/span/text()')[0]
+        return self.doc.xpath('//*[@id="page"]/div[7]/ul/li[1]/div/table/tbody/tr[1]/td[3]/span/text()')[0]
 
     def get_name(self):
         return 'Банк Уралсиб'
